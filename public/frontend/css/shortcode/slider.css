@@ -1,0 +1,144 @@
+/* -----------------------------------
+Template:  Theme Name
+
+NOTE: This is Slider style file. All Slider related style included in this file.
+
+--------------------------------------*/
+
+
+.single_slider {
+  height: 100vh;
+}
+.slider-title {
+  display: table;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-single {
+  text-align: center;
+  padding-bottom: 45px;
+}
+.banner-single h2 {
+  color: #f4dd62;
+/*  font-family: "Alex Brush",cursive;*/
+  font-size: 95px;
+  padding-top: 100px;
+  margin: 0;
+}
+.banner-single h1 {
+  color: #f4dd62;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 115px;
+}
+.banner-single p {
+  font-family: "Alex Brush",cursive;
+  font-size: 35px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 32px;
+  padding: 60px 150px;
+}
+.carousel-activator.slider-content.owl-carousel.owl-loaded.owl-drag {
+  padding-bottom: 50px;
+}
+
+/*Slider styles*/
+.slider-inner{
+  min-height:80vh;
+}
+.slider-content .owl-stage-outer{
+  width:100%;
+}
+.slider-content .owl-dots {
+  bottom: 45px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.slider-content .owl-dots button.owl-dot {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #F5DD63;
+  border-radius: 100%;
+  display: inline-block;
+  height: 18px;
+  margin: 0 7px;
+  outline: medium none;
+  transition: all 0.3s ease-in-out 0s;
+  width: 18px;
+}
+.slider-content .owl-dots button.owl-dot.active, .slider-content .owl-dots button.owl-dot:hover{
+  transform:scale(1.5);
+
+  background: #F5DD63;
+}
+.owl-item.active {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+
+/*Sidebar social*/
+.slider-social{
+  position: fixed;
+  top:50vh;
+  transform: translateY(-50%);
+  left: 0;
+  margin-left:-50px;
+  transition:all 0.3s ease-in-out 0s;
+  z-index:5555;
+}
+.slider-social.open{
+  margin-left: 0px;
+  z-index:99;
+}
+.slider-social span.slider-social-trigger{
+  position:absolute;
+  top:50%;
+  left:100%;
+  display: inline-block;
+  height:100px;
+  margin-top: -50px;
+  width:20px;
+  border-left: 30px solid #523C66;
+  z-index:999;
+}
+.slider-social-trigger i {
+  color: #fff;
+  font-size: 40px;
+  left: -20px;
+  position: absolute;
+  top: 30px;
+  cursor: pointer;
+}
+.slider-social ul li a{
+  display: inline-block;
+  height:50px;
+  text-align:center;
+  width:50px;
+  background: #5F3C54;
+  line-height: 50px;
+  color:#fff;
+  transition:all 0.3s ease-in-out 0s;
+  font-size: 30px;
+}
+.slider-social ul li a:hover {
+  background: #48182A none repeat scroll 0 0;
+  color: #F7E063;
+}
+.slider-social ul li{
+  border-bottom: 1px solid #000;
+  text-align:center;
+}
+.slider-social ul li:first-child{
+  border-top:1px solid #000;
+}

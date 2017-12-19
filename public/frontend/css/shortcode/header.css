@@ -1,0 +1,136 @@
+/*------------------------------------
+Template:  Theme Name
+
+NOTE: This is Header style file. All Header related style included in this file.
+
+--------------------------------------*/
+/*main-menu-area*/
+.main-menu-area {
+  background: #5f3c54 none repeat scroll 0 0;
+}
+.logo {
+  margin-top: 0px;
+}
+.logo a {
+  display: block;
+  width: 200px;
+}
+.logo a img {
+  width: 100%;
+}
+
+.primary-menu-area {
+    background: #5F3C54;
+}
+/*menu css */
+ul#nav {
+    text-align: center;
+}
+.primary-menu{
+  width:100%;
+  text-transform:uppercase;
+}
+.primary-menu ul{
+  background:;
+}
+.primary-menu ul li{
+  list-style:none;
+  display:inline-block;
+  position:relative;  
+}
+.primary-menu > ul > li > a {
+  padding: 27px 15px;
+
+}
+.primary-menu ul li a{
+  text-decoration:none;
+  color:#F4DD62;
+  display:block;
+  transition: background 0.4s linear 0s, color 0.4s linear 0s;
+  font-size: 14px;
+  border-bottom: 1px solid #523c66;
+  
+}
+.primary-menu ul li a:hover {
+  background:;
+  color:#fff;
+}
+.primary-menu ul ul{
+  display:none;
+  background:#5f2d4f;
+  position:absolute;
+  z-index:999;
+}
+.primary-menu ul > li > ul > li > a {
+  border-bottom: 1px solid #542044;
+  font-size: 14px;
+  padding: 10px;
+  text-align: left;
+  transition: background 0.4s linear 0s, color 0.4s linear 0s;
+}
+.primary-menu ul li:hover >ul{
+  display:block;
+}
+.primary-menu ul ul li{
+  display:block;
+}
+.primary-menu ul ul li a {
+    width: 180px;
+    display: inline-block;
+}
+.primary-menu ul ul li a:hover{
+  background:#48182A;
+}
+
+
+
+.primary-menu ul ul ul{
+  left:180px;
+  top:0px;
+  background:#48182A;
+}
+.primary-menu ul ul ul li a:hover{
+  background:#5F3C54;
+}
+
+
+
+
+
+
+
+
+.header-bottom {
+  background: #f4dd62 none repeat scroll 0 0;
+  height: 70px;
+  position: relative;
+  z-index: 99;
+}
+.contact {
+  text-align: center;
+}
+.contact a {
+  color: #5f3c54;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 700;
+  padding-top: 20px;
+}
+.contact > a:hover {
+ 
+}
+.contact a i {
+  font-size: 25px;
+  padding-right: 10px;
+  transform: translateY(4px);
+}
+.header-logo-2 {
+  background: #f4dd62 none repeat scroll 0 0;
+  border-radius: 100%;
+  height: 100px;
+  text-align: center;
+  width: 100%;
+}
+.header-logo-2 img {
+  height: 100px;
+}
