@@ -15,7 +15,7 @@
                                                 <div class="clint-pic">
                                                     <img src="{{ url('/storage/images/'.$value->image)}}" alt="service-image">
                                                 </div>
-                                                <p>{{ $value->title }}</p>
+                                                <p class="text-center">{!! html_entity_decode($value->title) !!}</p>
                                             </div>
 
                                         @endforeach

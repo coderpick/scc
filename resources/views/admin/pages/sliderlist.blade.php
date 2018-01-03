@@ -25,7 +25,8 @@
                 <tr style="text-align: center;">
                   <th>Title</th>
                   <th>Description</th>
-                  <th colspan="2" width="10%">Action</th>
+                  <th>Image</th>
+                  <th width="15%">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -34,14 +35,13 @@
                         <tr>
                             <td>{{$slider->title}}</td>
                             <td>{{$slider->description}}</td>
+                            <td><img width="120px" class="img-thumbnail" src="{{url('storage/slider/'.$slider->image)}}" alt=""></td>
                             <td>
-                                <a class="btn btn-primary" href="{{ route('slider.edit',$slider->id) }}">Edit</a>
-                            </td>
-                            <td>
-                                <form  action="{{route('slider.destroy', $slider->id)}}" method="post">
+                                <a class="btn btn-primary btn-sm" href="{{ route('slider.edit',$slider->id) }}">Edit</a>
+                                <form id="form-delete"  action="{{route('slider.destroy', $slider->id)}}" method="post">
                                     {{csrf_field()}}
                                     <input name="_method" type="hidden" value="DELETE">
-                                    <button style="cursor: pointer;" class="btn btn-warning" type="submit">Delete</button>
+                                    <button style="cursor: pointer;" class="btn btn-warning btn-sm" type="submit">Delete</button>
                                 </form>
                             </td>
                         </tr>

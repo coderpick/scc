@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Gallary;
+use App\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-class GallaryController extends Controller
+class GalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class GallaryController extends Controller
      */
     public function index()
     {
-        $gallarys = Gallary::orderBy('id','DESC')->get();
-        return view('admin.pages.gallarylist',compact('gallarys'));
+        $gallerys = Gallery::orderBy('id','DESC')->get();
+        return view('admin.pages.gallerylist',compact('gallerys'));
     }
 
     /**
@@ -25,7 +25,7 @@ class GallaryController extends Controller
     public function create()
     {
         //
-        return view('admin.pages.addgallary');
+        return view('admin.pages.addgallery');
     }
 
     /**
@@ -51,17 +51,17 @@ class GallaryController extends Controller
             //filename to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
             //Upload image
-            $path = $request->file('image')->storeAs('public/gallary',$fileNameToStore);
+            $path = $request->file('image')->storeAs('gallery/',$fileNameToStore);
         }else
         {
             $fileNameToStore="noimage.jpg";
         }
 
-        $gallary = new Gallary();
-        $gallary->title         = $request->title;
-        $gallary->image         = $fileNameToStore;
-        $gallary->save();
-        return redirect()->route('gallary.index')->with('success','Gallary added successfully');
+        $gallery = new Gallery();
+        $gallery->title         = $request->title;
+        $gallery->image         = $fileNameToStore;
+        $gallery->save();
+        return redirect()->route('gallery.index')->with('success','Gallery added successfully');
     }
 
     /**
@@ -83,8 +83,8 @@ class GallaryController extends Controller
      */
     public function edit($id)
     {
-        $gallarys = Gallary::find($id);
-        return view('admin.pages.editgallary',compact('gallarys'));
+        $gallerys = Gallery::find($id);
+        return view('admin.pages.editgallery',compact('gallerys'));
     }
 
     /**
@@ -111,18 +111,18 @@ class GallaryController extends Controller
             //filename to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
             //Upload image
-            $path = $request->file('image')->storeAs('public/gallary',$fileNameToStore);
+            $path = $request->file('image')->storeAs('gallery/',$fileNameToStore);
 
         }
-        $gallary = Gallary::find($id);
-        $gallary->title         = $request->title;
+        $gallery = Gallery::find($id);
+        $gallery->title         = $request->title;
         if ($request->hasFile('image'))
         {
-            Storage::delete('public/gallary/'.$gallary->image);
-            $gallary->image = $fileNameToStore;
+            Storage::delete('gallery/'.$gallery->image);
+            $gallery->image = $fileNameToStore;
         }
-        $gallary->save();
-        return redirect()->route('gallary.index')->with('success','Gallary updated successfully');
+        $gallery->save();
+        return redirect()->route('gallery.index')->with('success','Gallery updated successfully');
     }
 
     /**
@@ -133,13 +133,13 @@ class GallaryController extends Controller
      */
     public function destroy($id)
     {
-        $gallary = Gallary::find($id);
-        if ($gallary->image !='noimage.jpg')
+        $gallery = Gallery::find($id);
+        if ($gallery->image !='noimage.jpg')
         {
-            Storage::delete('public/gallary/'.$gallary->image);
+            Storage::delete('gallery/'.$gallery->image);
         }
-        $gallary->delete();
+        $gallery->delete();
 
-        return redirect()->route('gallary.index')->with('success','Gallay delete successfully');
+        return redirect()->route('gallery.index')->with('success','Gallery delete successfully');
     }
 }

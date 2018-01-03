@@ -25,7 +25,7 @@
                 <tr style="text-align: center;">
                   <th>Review Title</th>
                   <th>Image</th>
-                  <th colspan="2" width="10%">Action</th>
+                  <th width="15%">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -38,13 +38,12 @@
 
                               <img class="img-rounded" width="150px" src="{{ url('/storage/images/'.$review->image)}}" alt="">
                           </td>
-                          <td> <a class="btn btn-primary" href="{{ route('testimonial.edit',$review->id) }}">Edit</a></td>
                           <td>
-
-                              <form  action="{{route('testimonial.destroy', $review->id)}}" method="post">
+                              <a class="btn btn-primary btn-sm" href="{{ route('testimonial.edit',$review->id) }}">Edit</a>
+                              <form id="form-delete" action="{{route('testimonial.destroy', $review->id)}}" method="post">
                                   {{csrf_field()}}
                                   <input name="_method" type="hidden" value="DELETE">
-                                  <button style="cursor: pointer;" class="btn btn-warning" type="submit">Delete</button>
+                                  <button style="cursor: pointer;" class="btn btn-warning btn-sm" type="submit">Delete</button>
                               </form>
                           </td>
                       </tr>

@@ -25,26 +25,25 @@
                 <tr style="text-align: center;">
                   <th>Title</th>
                   <th>Image</th>
-                  <th colspan="2" width="10%">Action</th>
+                  <th width="15%">Action</th>
                 </tr>
               </thead>
               <tbody>
-                @if($gallarys->count())
+                @if($gallerys->count())
 
 
-                    @foreach($gallarys as $gallary)
+                    @foreach($gallerys as $gallery)
                     <tr>
-                        <td>{{ $gallary->title }}</td>
-                        <td><img width="120px" class="img-thumbnail" src="{{url('storage/gallary/'.$gallary->image)}}" alt=""></td>
-                       <td> <a class="btn btn-primary btn-sm" href="{{ route('gallary.edit',$gallary->id) }}">Edit</a></td>
-                        <td>
-
-                            <form  action="{{route('gallary.destroy', $gallary->id)}}" method="post">
-                                {{csrf_field()}}
-                                <input name="_method" type="hidden" value="DELETE">
-                                <button style="cursor: pointer;" class="btn btn-warning btn-sm" type="submit">Delete</button>
-                            </form>
-                        </td>
+                        <td>{{ $gallery->title }}</td>
+                        <td><img width="120px" class="img-thumbnail" src="{{url('storage/gallery/'.$gallery->image)}}" alt=""></td>
+                       <td>
+                           <a class="btn btn-primary btn-sm" href="{{ route('gallery.edit',$gallery->id) }}">Edit</a>
+                           <form id="form-delete"  action="{{route('gallery.destroy', $gallery->id)}}" method="post">
+                               {{csrf_field()}}
+                               <input name="_method" type="hidden" value="DELETE">
+                               <button style="cursor: pointer;" class="btn btn-warning btn-sm" type="submit">Delete</button>
+                           </form>
+                       </td>
                     </tr>
                     @endforeach
                 @else

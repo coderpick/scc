@@ -33,7 +33,20 @@
 					<label for="uploadimg">Description:</label>
 					<textarea class="form-control" name="description">{{$slider->description}}</textarea>
 				</div>
-				<button type="submit" class="btn btn-primary">Update Slider Content</button>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label for="uploadimg">Image:</label>
+							<input type="file" name="image" value="{{$slider->image}}"  class="form-control" id="uploadimg">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="service-img">
+							<img class="img-rounded" width="150px" src="{{ url('/storage/slider/'.$slider->image)}}" alt="">
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Update Slider</button>
           	</form>           
       </div>
     </div>

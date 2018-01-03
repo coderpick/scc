@@ -5,7 +5,7 @@
 	        <li class="breadcrumb-item">
 	          <a href="{{'/dashboard'}}">Dashboard</a>
 	        </li>
-	        <li class="breadcrumb-item "> <a href="{{'/dashboard/gallary'}}">Gallary</a></li>
+	        <li class="breadcrumb-item "> <a href="{{url('/dashboard/gallery')}}">Gallery</a></li>
 	        <li class="breadcrumb-item active">Create</li>
       </ol>
         <div style="margin-top: 20px; width: 75%; margin:0 auto">
@@ -32,7 +32,7 @@
 
       <div class="card-header">Add New Gallary Photos</div>
       <div class="card-body">  
-          	<form action="{{route('gallary.store')}}" method="post" enctype="multipart/form-data">
+          	<form action="{{route('gallery.store')}}" method="post" enctype="multipart/form-data">
           		{{ csrf_field()}}
 				<div class="row">
 					<div class="col-sm-6">

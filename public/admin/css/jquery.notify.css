@@ -23,9 +23,9 @@
   right: 10px;
 }
 
-.small { width: 20%; }
+.small { width: 15%; }
 
-.big { width: 40%; }
+.big { width: 30%; }
 
 .popup {
   position: fixed;
@@ -40,6 +40,7 @@
 .popup h3 {
   margin-top: 0;
   color: white;
+  font-size: 20px;
   font-family: Arial, sans-serif;
 }
 

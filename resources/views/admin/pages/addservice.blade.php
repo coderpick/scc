@@ -23,14 +23,19 @@
           	<form action="{{route('services.store')}}" method="post" enctype="multipart/form-data">
           		{{ csrf_field()}}
       		    <div class="form-group">
-			        <label for="inputservice">Service Name:</label>
-			        <input type="text" name="title" class="form-control" id="inputservice" placeholder="Enter Service name">
+			        <label for="inputService">Service Name:</label>
+			        <input type="text" name="title" class="form-control" id="inputService" placeholder="Enter Service name">
 			        
 			    </div>
+				<div class="form-group">
+					<label for="inputSlug">Service Slug:</label>
+					<input type="text" name="slug" class="form-control" id="inputSlug" placeholder="Enter Service slug">
+
+				</div>
 			     <div class="form-group">
 
 			        <label for="inputBody">Service Description:</label>
-			         <textarea class="form-control" rows="6" name="description"></textarea>
+			         <textarea id="editor" class="form-control" rows="6" name="description"></textarea>
 			         
 			    </div>
 			    <div class="form-group">

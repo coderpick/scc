@@ -9,11 +9,11 @@
   <meta name="author" content="">
   <title>SB Admin - Start Bootstrap Template</title>
   <!-- Bootstrap core CSS-->
-  <link href="{{asset('admin/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('public/admin/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="{{asset('admin/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{asset('public/admin/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
-  <link href="{{asset('admin/css/sb-admin.css')}}" rel="stylesheet">
+  <link href="{{asset('public/admin/css/sb-admin.css')}}" rel="stylesheet">
 </head>
 
 <body class="bg-dark">
@@ -54,10 +54,10 @@
     </div>
   </div>
   <!-- Bootstrap core JavaScript-->
-  <script src="{{asset('admin/vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('public/admin/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('public/admin/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <!-- Core plugin JavaScript-->
-  <script src="{{asset('admin/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+  <script src="{{asset('public/admin/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 @section('MainContent')
  	   <ol class="breadcrumb">
 	        <li class="breadcrumb-item">
-	          <a href="{{'/dashboard'}}">Dashboard</a>
+	          <a href="{{url('/dashboard')}}">Dashboard</a>
 	        </li>
 	        <li class="breadcrumb-item "> <a href="{{'/dashboard/services'}}">Service</a></li>
 	        <li class="breadcrumb-item active">Edit</li>
@@ -23,11 +23,11 @@
       <div class="card-header">Edit Services</div>
       <div class="card-body">
 
-          	<form action="{{ route('gallary.update',$gallarys->id) }}" method="post" enctype="multipart/form-data">
+          	<form action="{{ route('gallery.update',$gallerys->id) }}" method="post" enctype="multipart/form-data">
           		{{ csrf_field()}}
       		    <div class="form-group">
 			        <label for="inputservice">Title:</label>
-			        <input type="text" name="title" class="form-control" id="inputservice" value="{{ $gallarys->title }}">
+			        <input type="text" name="title" class="form-control" id="inputservice" value="{{ $gallerys->title }}">
 					<input type="hidden" name="_method" value="PUT">
 			    </div>
 
@@ -35,12 +35,12 @@
 					<div class="col-sm-6">
 						<div class="form-group">
 							<label for="uploadimg">Image:</label>
-							<input type="file" name="image" value="{{$gallarys->image}}"  class="form-control" id="uploadimg">
+							<input type="file" name="image" value="{{$gallerys->image}}"  class="form-control" id="uploadimg">
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div class="service-img">
-							<img class="img-rounded" width="150px" src="{{ url('/storage/gallary/'.$gallarys->image)}}" alt="">
+							<img class="img-rounded" width="150px" src="{{ url('/storage/gallery/'.$gallerys->image)}}" alt="">
 						</div>
 					</div>
 				</div>

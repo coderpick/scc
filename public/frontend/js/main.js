@@ -75,7 +75,7 @@ NOTE: If you have any note put here.
     $("#fakeloader").fakeLoader({
         timeToHide:2000,
         zIndex:"9999999999999",//Default zIndex
-        spinner:"spinner5",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+        spinner:"spinner2",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
         bgColor:"rgba(0,33,33,33)", //Hex, RGB or RGBA colors
 
     });
@@ -152,19 +152,11 @@ NOTE: If you have any note put here.
 
 // smooth scroll active
 var scroll = new SmoothScroll('a[href*="#"]');
-    
+
+        $('.carousel-indicators li:nth-child(1)').addClass('active');
+        $('.item:nth-child(1)').addClass('active');
 
 })(jQuery);
 
 
 
-$(window).scroll(function() {
-if ($(this).scrollTop() > 1){  
-    $('#sticky-header').addClass("sticky");
-  }
-  else{
-    $('#sticky-header').removeClass("sticky");
-  }
-
-
-});

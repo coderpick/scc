@@ -26,10 +26,10 @@ function getTextWidth(text, font) {
     if(settings.type==="Success")
     {
       $div = $("<div>", {"class":"popup success" });
-      $header = $("<h2>" ,{"class":"ico-success"});
+      $header = $("<h3>" ,{"class":"ico-success"});
     }else {
       $div = $("<div>", {"class":"popup failure" });
-      $header = $("<h2>" ,{"class":"ico-failure"});
+      $header = $("<h3>" ,{"class":"ico-failure"});
     }
     console.log(settings.position);
     if(settings.position==="top-left")

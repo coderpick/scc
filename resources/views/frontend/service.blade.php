@@ -1,15 +1,18 @@
      @extends('frontend.layouts.master')
 
+  @section('title')
+  Services-page
+  @endsection 
  	 @section('content')
  	         <section id="page-content" class="page-wrapper">
 
             <!-- start services-area -->
-            <div class="services-area ptb-100">
+            <div class="services-area ptb-175">
                 <div class="container">
                     <div class="row">
                         <div class="section-title">
                             <h3> All Services</h3>
-                            <span><img src="{{asset('frontend/images/icons/design-01.png')}}" alt=""></span>
+                            <span><img src="{{asset('public/frontend/images/icons/design-01.png')}}" alt=""></span>
                         </div>
                     </div>
 
@@ -23,9 +26,9 @@
                                 </div>
                                 <div class="service-content">
                                     <div class="service-title">
-                                        <a href="{{url('/serviceDetails',$item->id)}}">{{$item->title}}</a>
+                                        <a href="{{url('/service',$item->slug)}}">{{$item->title}}</a>
                                     </div>
-                                    <p>{{ $item->description }}</p>
+                                    <p>{{str_limit($item->description, 50, ' (...)')}}</p>
                                 </div>
                             </div>
                         </div>

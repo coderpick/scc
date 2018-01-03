@@ -1,5 +1,9 @@
  @extends('frontend.layouts.master')
 
+  @section('title')
+  Home-page
+  @endsection	
+
  @section('content')
   @include('frontend.includes.slider')
   @include('frontend.includes.about')

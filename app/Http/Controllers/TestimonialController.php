@@ -51,7 +51,7 @@ class TestimonialController extends Controller
             //filename to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
             //Upload image
-            $path = $request->file('image')->storeAs('public/images',$fileNameToStore);
+            $path = $request->file('image')->storeAs('images/',$fileNameToStore);
         }else
         {
             $fileNameToStore="noimage.jpg";
@@ -111,14 +111,14 @@ class TestimonialController extends Controller
             //filename to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
             //Upload image
-            $path = $request->file('image')->storeAs('public/images',$fileNameToStore);
+            $path = $request->file('image')->storeAs('images/',$fileNameToStore);
 
         }
         $reviews = Testimonial::find($id);
         $reviews->title         = $request->title;
         if ($request->hasFile('image'))
         {
-            Storage::delete('public/images/'.$reviews->image);
+            Storage::delete('images/'.$reviews->image);
             $reviews->image = $fileNameToStore;
         }
         $reviews->save();
@@ -136,7 +136,7 @@ class TestimonialController extends Controller
         $reviews = Testimonial::find($id);
         if ($reviews->image !='noimage.jpg')
         {
-            Storage::delete('public/images/'.$reviews->image);
+            Storage::delete('images/'.$reviews->image);
         }
         $reviews->delete();
 

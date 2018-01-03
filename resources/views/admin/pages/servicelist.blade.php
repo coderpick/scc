@@ -24,7 +24,7 @@
                   <th>Title</th>
                   <th>Description</th>
                   <th>Image</th>
-                  <th colspan="2">Action</th>
+                  <th  width="15%">Action</th>
                 </tr>
               </thead>
 
@@ -37,14 +37,15 @@
                   <td><img class="img-rounded" width="120px" src="{{ url('/storage/images/'.$service->image)}}" alt=""></td>
                   <td>
                       <a class="btn btn-primary btn-sm" href="{{ route('services.edit',$service->id) }}">Edit</a>
-                  </td>
-                   <td>
-                      <form  action="{{route('services.destroy', $service->id)}}" method="post">
+                      <form id="form-delete" action="{{route('services.destroy', $service->id)}}" method="post">
                           {{csrf_field()}}
                           <input name="_method" type="hidden" value="DELETE">
                           <button style="cursor: pointer;" class="btn btn-warning btn-sm" type="submit">Delete</button>
                       </form>
                   </td>
+
+
+
                 </tr>
                 @endforeach
                 @else

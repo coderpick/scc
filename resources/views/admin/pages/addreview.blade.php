@@ -37,7 +37,7 @@
           	<form action="{{route('testimonial.store')}}" method="post" enctype="multipart/form-data">
           		{{ csrf_field()}}
 				<div class="row">
-					<div class="col-sm-6">
+					<div class="col-sm-8">
 						<div class="form-group">
 							<label for="inputTitle">Review Description:</label>
 							<textarea class="form-control" name="title" id="inputTitle"></textarea>
@@ -47,7 +47,7 @@
 							<input type="file" name="image" accept="image/*" onchange="previewImage(event)" class="form-control" id="uploadimg">
 						</div>
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-4">
 						<img id="image-preview" class="img-thumbnail" style="width: 200px;">
 				    </div>
 

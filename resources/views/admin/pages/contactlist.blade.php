@@ -20,15 +20,16 @@
           </script>
 
    <div class="table-responsive">
-            <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
-                <tr style="text-align: center;">
+                <tr >
                   <th>S/N</th>
                   <th>Name</th>
                   <th>Email</th>
                   <th>Message</th>
                   <th width="7%">Status</th>
-                  <th colspan="2" width="10%">Action</th>
+                  <th  width="15%">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -48,9 +49,9 @@
                                   <a href="" class="btn btn-success btn-sm">Success</a>
                                <?php }?>
                           </td>
-                          <td><a class="btn btn-primary btn-sm" href="{{route('contact.contactdetails',$contact->id)}}">View</a></td>
                           <td>
-                              <form  action="{{route('contact.delete',$contact->id)}}" method="post">
+                              <a class="btn btn-primary btn-sm" href="{{route('contact.contactdetails',$contact->id)}}">View</a>
+                              <form id="form-delete"  action="{{route('contact.delete',$contact->id)}}" method="post">
                                   {{csrf_field()}}
                                   <input name="_method" type="hidden" value="DELETE">
                                   <button style="cursor: pointer;" class="btn btn-danger btn-sm" type="submit">Delete</button>

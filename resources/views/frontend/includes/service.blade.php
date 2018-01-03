@@ -3,7 +3,7 @@
                     <div class="row">
                         <div class="section-title">
                             <h3>Services</h3>
-                            <span><img src="{{asset('frontend/images/icons/design-01.png')}}" alt=""></span>
+                            <span><img src="{{asset('public/frontend/images/icons/design-01.png')}}" alt=""></span>
                         </div>
                     </div>
                     <div class="row pt-40">
@@ -16,9 +16,9 @@
                                 </div>
                                 <div class="service-content">
                                     <div class="service-title">
-                                        <a href="{{url('/serviceDetails',$item->id)}}">{{$item->title}}</a>
+                                        <a href="{{url('/service',$item->slug)}}">{{$item->title}}</a>
                                     </div>
-                                    <p>{{$item->description}}</p>
+                                    <p>{{str_limit($item->description,150,' ...')}}   </p>
                                 </div>
                             </div>
                         </div>

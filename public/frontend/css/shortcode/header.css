@@ -20,7 +20,7 @@ NOTE: This is Header style file. All Header related style included in this file.
 }
 
 .primary-menu-area {
-    background: #5F3C54;
+    background: #382030;
 }
 /*menu css */
 ul#nav {
@@ -31,7 +31,7 @@ ul#nav {
   text-transform:uppercase;
 }
 .primary-menu ul{
-  background:;
+  background:none;
 }
 .primary-menu ul li{
   list-style:none;
@@ -48,11 +48,9 @@ ul#nav {
   display:block;
   transition: background 0.4s linear 0s, color 0.4s linear 0s;
   font-size: 14px;
-  border-bottom: 1px solid #523c66;
-  
 }
 .primary-menu ul li a:hover {
-  background:;
+  background:transparent;
   color:#fff;
 }
 .primary-menu ul ul{
@@ -92,13 +90,6 @@ ul#nav {
 .primary-menu ul ul ul li a:hover{
   background:#5F3C54;
 }
-
-
-
-
-
-
-
 
 .header-bottom {
   background: #f4dd62 none repeat scroll 0 0;

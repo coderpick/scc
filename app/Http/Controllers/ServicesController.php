@@ -5,7 +5,7 @@ use DB;
 use App\Services;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
+
 class ServicesController extends Controller
 {
     /**
@@ -18,7 +18,7 @@ class ServicesController extends Controller
 
       //$services = DB::table('services')->get();
 
-     $services = Services::orderBy('id','DESC')->get();     
+      $services = Services::orderBy('id','DESC')->get();
       return view('admin.pages.servicelist',compact('services'));
     }
 
@@ -44,6 +44,7 @@ class ServicesController extends Controller
          $this->validate($request,[
 
             'title'             => 'required',
+            'slug'             => 'required',
             'description'       => 'required',
             'image'             => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
         ]);
@@ -59,13 +60,15 @@ class ServicesController extends Controller
              //filename to store
              $fileNameToStore = $filename.'_'.time().'.'.$extension;
              //Upload image
-             $path = $request->file('image')->storeAs('public/images',$fileNameToStore);
+             $path = $request->file('image')->storeAs('images/',$fileNameToStore);
+
 
          }else{
              $fileNameToStore = 'noimage.jpg';
          }
         $service  = new Services;
         $service->title         = $request->title;
+        $service->slug          = str_slug($request->slug);
         $service->description   = $request->description;
         $service->image         = $fileNameToStore;
         $service->save();
@@ -123,7 +126,7 @@ class ServicesController extends Controller
             //filename to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
             //Upload image
-            $path = $request->file('image')->storeAs('public/images',$fileNameToStore);
+            $path = $request->file('image')->storeAs('images/',$fileNameToStore);
 
         }
         $service = Services::find($id);
@@ -131,7 +134,7 @@ class ServicesController extends Controller
         $service->description   = $request->description;
         if ($request->hasFile('image'))
         {
-            Storage::delete('public/images/'.$service->image);
+            Storage::delete('images/'.$service->image);
             $service->image = $fileNameToStore;
         }
         $service->save();
@@ -150,7 +153,7 @@ class ServicesController extends Controller
          $service = Services::find($id);
          if ($service->image !='noimage.jpg')
          {
-            Storage::delete('public/images/'.$service->image);
+            Storage::delete('images/'.$service->image);
          }
          $service->delete();
 

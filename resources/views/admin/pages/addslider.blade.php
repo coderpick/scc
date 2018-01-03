@@ -27,11 +27,15 @@
 
 						<div class="form-group">
 							<label for="inputTitle">Title</label>
-							<input type="text" name="title" class="form-control" id="inputTitle">
+							<input type="text" name="title" class="form-control" id="inputTitle" required>
 						</div>
 						<div class="form-group">
-							<label for="uploadimg">Description:</label>
-						   <textarea class="form-control" name="description"></textarea>
+							<label for="inputDesc">Description:</label>
+						   <textarea class="form-control" name="description" id="inputDesc" required></textarea>
+						</div>
+						<div class="form-group">
+							<label for="uploadSlider">Upload Slider Photos</label>
+							<input type="file" name="image" class="form-control" id="uploadSlider" required>
 						</div>
 
 			    <button type="submit" class="btn btn-primary">Add new Slider Content</button>

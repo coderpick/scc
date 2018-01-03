@@ -1,5 +1,5 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Saiful Community Center</a>
+    <a class="navbar-brand" href="{{url('/dashboard')}}">Saiful Community Center</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,10 +35,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="{{url('/dashboard/gallary/create')}}"><i class="fa fa-gg-circle"></i> Add Gallery</a>
+              <a href="{{url('/dashboard/gallery/create')}}"><i class="fa fa-gg-circle"></i> Add Gallery</a>
             </li>
              <li>
-                 <a href="{{url('/dashboard/gallary')}}"> <i class="fa fa-gg-circle"></i> Show Gallery</a>
+                 <a href="{{url('/dashboard/gallery')}}"> <i class="fa fa-gg-circle"></i> Show Gallery</a>
              </li>
 
           </ul>
@@ -73,6 +73,40 @@
 
               </ul>
           </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+              <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAbout" data-parent="#exampleAccordion">
+                  <i class="fa fa-comments-o"></i>
+                  <span class="nav-link-text">About</span>
+              </a>
+              <ul class="sidenav-second-level collapse" id="collapseAbout">
+                  <li>
+                      <a href="{{url('/dashboard/about')}}"><i class="fa fa-gg-circle"></i>About Content</a>
+                  </li>
+
+              </ul>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+              <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseSociallinks" data-parent="#exampleAccordion">
+                  <i class="fa fa-share-square-o"></i>
+                  <span class="nav-link-text">Social Links</span>
+              </a>
+              <ul class="sidenav-second-level collapse" id="collapseSociallinks">
+                  <li>
+                      <a href="{{url('/dashboard/social')}}"><i class="fa fa-share-square-o"></i> Social Links</a>
+                  </li>
+              </ul>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+              <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseContactnumber" data-parent="#exampleAccordion">
+                  <i class="fa fa-phone"></i>
+                  <span class="nav-link-text">Contact Numbers</span>
+              </a>
+              <ul class="sidenav-second-level collapse" id="collapseContactnumber">
+                  <li>
+                      <a href="{{url('/dashboard/mobile')}}"><i class="fa fa-phone"></i> Contact Numbers</a>
+                  </li>
+              </ul>
+          </li>
          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseUsers" data-parent="#exampleAccordion">
             <i class="fa fa-users"></i>
@@ -80,7 +114,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseUsers">
            <li>
-              <a href="cards.html"> <i class="fa fa-gg-circle"></i> Profile</a>
+              <a href="{{route('profile')}}"> <i class="fa fa-gg-circle"></i> Profile</a>
             </li>
           </ul>
         </li>
@@ -93,9 +127,11 @@
             <li>
               <a href="{{url('/dashboard/contactlist')}}"><i class="fa fa-gg-circle"></i> Message</a>
             </li>
+              <li>
+                  <a href="{{url('/dashboard/newsletteremail')}}"><i class="fa fa-gg-circle"></i> News Letter</a>
+              </li>
           </ul>
         </li>
-
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -113,14 +149,15 @@
 
                   <ul class="dropdown-menu">
                        <li class="user-header">
-                        <img src="https://placeimg.com/80/80/people" class="img-circle" alt="User Image">
-
+                           <div class="profile-2">
+                           <img width="80" src="{{asset('public/admin/img/saiful.jpg')}}" class="img-circle" alt="User Image">
+                           </div>
                         <p class="log-user-name">{{ Auth::user()->name }}</p>
                       </li>
 
                         <li class="user-footer">
                           <div class="pull-left">
-                            <a href="#" class="btn btn-warning">Profile</a>
+                            <a href="{{route('profile')}}" class="btn btn-warning">Profile</a>
                           </div>
                           <div class="pull-right">
                            

@@ -39,6 +39,9 @@
 	.service-title > a {
 		font-size: 1.4em;
 	}
+	.hero-text{
+	    height:550px;
+	}
 }
 @media (min-width: 1170px) and (max-width: 1199px) {
 	.banner-single h2 {
@@ -62,6 +65,9 @@
 	.clint-pic::after {
 	  left: 30%;
 	}
+	.hero-text{
+	    height:530px;
+	}
 
 }
 /**************************************
@@ -72,6 +78,7 @@
 	body{
 		background: red;
 	}
+
 
 	.banner-single p {
 	    padding: 26px 40px;
@@ -131,7 +138,12 @@
 	.shadow {
 	  width: 322px;
 	}
-
+	.hero-text{
+	    height:510px;
+	}
+    .hero-text h1{
+        font-size:45px;
+    }
 
 }
 
@@ -231,8 +243,7 @@
 	}
 	.newsletter input {
 	  font-size: 20px;
-	  height: 35px;
-	  margin-top: 45px;
+	  height: 34px;
 	  width: 280px;
 	}
 	.newsletter a {
@@ -289,6 +300,37 @@
 	.read-more a {
 	  padding: 5px 10px;
 	}
+	.hero-text {
+    padding: 80px 0;
+    max-width: 700px;
+    margin: 0 auto;
+    height:400px;
+    }
+	.hero-text h1{
+    font-size:38px;
+    line-height:50px;
+    }
+    .gallary-content h3 {
+    font-size: 28px;
+   }
+    .newsletter > h3 {
+    color: #f4dd62;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 5px 0 2px #000;
+    text-transform: capitalize;
+    font-size: 28px;
+    margin-top: 25px;
+}
+    .newsletter h3::before {
+    border-bottom: 2px solid #f4dd62;
+    content: "";
+    left: 21%;
+    position: absolute;
+    top: 60px;
+    width: 56%;
+}
+   
 }
 
  
@@ -304,7 +346,16 @@
 	.container {
 		width:300px
 	}
-
+	.hero-text {
+    padding: 66px 0;
+    max-width: 500px;
+    margin: 0 auto;
+    height:265px;
+    }
+    .hero-text h1{
+        font-size:32px;
+        line-height:40px;
+    }
 
 
 	.logo a {
@@ -514,7 +565,6 @@
 	  border-right: 0;
 	}
 	.newsletter input {
-	  margin-top: -8px;
 	  margin-left: 10px;
 	}
 	.newsletter > h3 {
@@ -566,9 +616,13 @@
 	  font-size: 10px;
 	  margin-bottom: 5px;
 	}
-		.gallary-area.ptb-100 {
+  .gallary-area.ptb-100 {
 	  padding: 40px 0;
 	}
+	
+	.gallary-logo {
+    height: 200px;
+  }
 }
  
 /************************************
@@ -672,10 +726,10 @@
 	  text-align: center;
 	}
 	.gallary-content h3 {
-		font-size: 30px;
+		font-size: 26px;
 	}
 	.gallary-content h3::before {
-	  top: 35px;
+	  top: 26px;
 	  width: 30%;
 	}
 	.gallary-content h3 {
@@ -719,7 +773,6 @@
 	  text-align: left;
 	}
 	.newsletter input {
-		margin-top: 9px;
 		font-size: 20px;;
 	}
 	.newsletter a {
@@ -775,17 +828,16 @@
 	  font-size: 15px;
 	  margin-left: 35%;
 	}
-	.social-icon {
-	  left: 35%;
-	  margin-left: 0;
-	  position: absolute;
-	}
+
 	.feedback-form {
 	  margin-top: 15px;
 	}
 	.read-more {
 	  left: 43%;
 	}
+	.address {
+    padding: 2px 0;
+}
 
 }
  

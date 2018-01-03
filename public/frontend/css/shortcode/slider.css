@@ -6,9 +6,7 @@ NOTE: This is Slider style file. All Slider related style included in this file.
 --------------------------------------*/
 
 
-.single_slider {
-  height: 100vh;
-}
+
 .slider-title {
   display: table;
   height: 100%;
@@ -19,10 +17,7 @@ NOTE: This is Slider style file. All Slider related style included in this file.
   display: table-cell;
   vertical-align: middle;
 }
-.banner-single {
-  text-align: center;
-  padding-bottom: 45px;
-}
+
 .banner-single h2 {
   color: #f4dd62;
 /*  font-family: "Alex Brush",cursive;*/
@@ -45,13 +40,11 @@ NOTE: This is Slider style file. All Slider related style included in this file.
   padding: 60px 150px;
 }
 .carousel-activator.slider-content.owl-carousel.owl-loaded.owl-drag {
-  padding-bottom: 50px;
+  /*padding-bottom: 50px;*/
 }
 
 /*Slider styles*/
-.slider-inner{
-  min-height:80vh;
-}
+
 .slider-content .owl-stage-outer{
   width:100%;
 }
